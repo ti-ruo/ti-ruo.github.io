@@ -17,7 +17,7 @@ const pages = ['Home', 'Gallery', 'About'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [hrefPage, setHrefPage] = React.useState<string>('/');
+  const [hrefPage, setHrefPage] = React.useState<string>('#/');
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -25,12 +25,12 @@ function ResponsiveAppBar() {
 
   const handleCloseNavMenu = React.useCallback((page: string) => {
     setAnchorElNav(null);
-    if (page == 'Home'){
-        setHrefPage('/')
-    }else if (page == 'About'){
-        setHrefPage('/about')
-    }else if (page == 'Gallery'){
-        setHrefPage('/gallery')
+    if (page === 'Home'){
+        setHrefPage('#')
+    }else if (page === 'About'){
+        setHrefPage('#/about')
+    }else if (page === 'Gallery'){
+        setHrefPage('#/gallery')
     }
   },[anchorElNav]);
 
@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="#"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
