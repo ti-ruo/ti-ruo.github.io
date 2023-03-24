@@ -3,6 +3,7 @@ import './App.css';
 // different pages
 import Home from './pages/home';
 import About from './pages/about';
+import Gallery from './pages/gallery';
 import ResponsiveAppBar from './navigation/navi';
 // elements from MUI
 import Button from '@mui/material/Button';
@@ -43,6 +44,7 @@ function App() {
           <Route path='/' Component={Home}/>
           <Route path='/Home' Component={Home}/>
           <Route path='/about' Component={About}/>
+          <Route path='/gallery' Component={Gallery}/>
         </Routes>
       </header>
     </div>

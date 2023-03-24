@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 //import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Home', 'About'];
+const pages = ['Home', 'Gallery', 'About'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -29,6 +29,8 @@ function ResponsiveAppBar() {
         setHrefPage('/')
     }else if (page == 'About'){
         setHrefPage('/about')
+    }else if (page == 'Gallery'){
+        setHrefPage('/gallery')
     }
   },[anchorElNav]);
 
