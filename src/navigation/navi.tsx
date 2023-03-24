@@ -17,14 +17,20 @@ const pages = ['Home', 'About'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [hrefPage, setHrefPage] = React.useState<string>('/');
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = React.useCallback((page: string) => {
     setAnchorElNav(null);
-  };
+    if (page == 'Home'){
+        setHrefPage('/')
+    }else if (page == 'About'){
+        setHrefPage('/about')
+    }
+  },[anchorElNav]);
 
   return (
     <AppBar position="static">
@@ -72,7 +78,6 @@ function ResponsiveAppBar() {
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
@@ -80,8 +85,8 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem 
                 key={page} 
-                onClick={handleCloseNavMenu}
-                href={'/'+page}
+                onClick={()=>handleCloseNavMenu(page)}
+                href={hrefPage}
                 >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
@@ -110,9 +115,9 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={()=>handleCloseNavMenu(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-                href={'/'+page}
+                href={hrefPage}
               >
                 {page}
               </Button>
