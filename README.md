@@ -1,1 +1,0 @@
-# tiruo.github.io
