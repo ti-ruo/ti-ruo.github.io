@@ -1,26 +1,19 @@
 import React from 'react';
 import logo from '../svg/logo.svg';
 import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import jing_shan from '../images/Background/jing_shan.jpg'
 
 function Home(){
+
+
+
     return(
         <div>
-        <header className="App-header">
-        <Button>Hello World</Button>
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-            Welcome!
-            </p>
-            <a
-                className="App-link"
-                href="/about"
-                target="_self"
-                rel="noopener noreferrer"
-            >
-            Link
-            </a>
-        </header>
-      </div>
+                
+
+        </div>
     )
 }
 
