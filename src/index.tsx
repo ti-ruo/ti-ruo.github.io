@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, HashRouter } from 'react-router-dom'; // allow us to use the router method
+import { HashRouter } from 'react-router-dom'; // allow us to use the router method
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   
     <React.StrictMode>
-      <HashRouter>
+      <HashRouter basename='/'>
         <App />
       </HashRouter>
     </React.StrictMode>

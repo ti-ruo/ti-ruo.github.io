@@ -41,10 +41,10 @@ function App() {
       <ResponsiveAppBar/>
       <header className="App-header">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path='/' Component={Home}/>
+          <Route path="/home" Component={Home} />
+          <Route path="/about" Component={About} />
+          <Route path="/gallery" Component={Gallery} />
         </Routes>
       </header>
     </div>

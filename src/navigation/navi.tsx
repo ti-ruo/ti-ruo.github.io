@@ -26,11 +26,11 @@ function ResponsiveAppBar() {
   const handleCloseNavMenu = React.useCallback((page: string) => {
     setAnchorElNav(null);
     if (page === 'Home'){
-        setHrefPage('#')
+        setHrefPage('/#')
     }else if (page === 'About'){
-        setHrefPage('#/about')
+        setHrefPage('/#/about')
     }else if (page === 'Gallery'){
-        setHrefPage('#/gallery')
+        setHrefPage('/#/gallery')
     }
   },[anchorElNav]);
 
