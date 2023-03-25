@@ -15,6 +15,8 @@ import { useState, useCallback, useEffect } from 'react';
 // open in new tab use '_blank' in target, else use '_self'
 // use MUI library
 // https://mui.com/core
+// material icons
+// https://mui.com/material-ui/material-icons/
 function App() {
   
 
@@ -47,6 +49,7 @@ function App() {
           <Route path="/gallery" Component={Gallery} />
         </Routes>
       </header>
+      <footer>I have a bottom line :[</footer>
     </div>
   );
 }
