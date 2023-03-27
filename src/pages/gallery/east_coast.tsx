@@ -3,6 +3,7 @@ import PhotoViewer from './image_list';
 // photos
 import fifth_ave from '../../images/east_coast/fifth_ave.jpg'
 import top_of_the_rock from '../../images/east_coast/top_of_the_rock.jpg'
+import { Button } from '@mui/material';
 
 interface Image {
     src: string;
@@ -23,6 +24,7 @@ const images: Image[] = [
 function EastCoast(){
     return(
         <div>
+            <Button variant="outlined" href='/#/gallery'>Back to Gallery</Button>
             <h1>US East Coast</h1>
             <h3>Taken @US East Coast States</h3>
             <PhotoViewer images={images}/>

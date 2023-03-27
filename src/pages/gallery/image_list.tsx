@@ -52,7 +52,7 @@ function PhotoViewer(props: PhotosProps) {
                     <img src={selectedImage} alt="Full size image" className="full-image" 
                     style={{ 
                         width: '66%', height: '66%', objectFit: 'contain',
-                        maxHeight: window.innerHeight, maxWidth: window.innerWidth
+                        maxHeight: window.innerHeight*0.6, maxWidth: window.innerWidth*0.6
                     }}
                     />
                 </Stack>
