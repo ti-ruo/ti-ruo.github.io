@@ -1,5 +1,4 @@
-import React from 'react';
-import default_profile from '../images/profile/default_profile.png'
+import profile1 from '../images/profile/profile1.png'
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -15,7 +14,12 @@ function About(){
             spacing={4}
             >
                 
-                <img src={default_profile} width={'400px'} height={'400px'}></img>
+                <img 
+                    src={profile1} 
+                    width={'200px'} 
+                    height={'200px'} 
+                    alt = "profile pic"
+                />
                 
                 <Stack direction="column" spacing={1} alignItems={'center'}>
                     <h1>Hello and Welcome!</h1>
@@ -28,6 +32,7 @@ function About(){
                             aria-label="gitHub"
                             href = 'https://github.com/Sakirty'
                             target="_blank"
+                            sx={{ color: 'white' }}
                         >
                             <GitHubIcon />
                         </IconButton>
@@ -36,22 +41,14 @@ function About(){
                             aria-label="LinkedIn"
                             href = 'https://www.linkedin.com/in/tiruo-y-7a8b64159/'
                             target="_blank"
+                            sx={{ color: 'white' }}
                         >
                             <LinkedInIcon />
                         </IconButton> 
                         
                     </Stack>
                 </Stack>
-                
-                
-
-            </Stack>
-            
-                
-                
-                
-                
-                
+            </Stack>   
         </div>
     )
 }

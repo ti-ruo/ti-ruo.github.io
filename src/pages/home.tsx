@@ -1,19 +1,15 @@
-import React from 'react';
-import logo from '../svg/logo.svg';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import jing_shan from '../images/Background/jing_shan.jpg'
+import { Stack } from '@mui/material';
 
 
 function Home(){
-
-
-
     return(
         <div>
-                <p>this is homepage</p>
-
+            <h1 >歡迎</h1>
+            <Stack direction="row" spacing={1} alignItems={'center'}>
+                <p>Welcome | </p>
+                <p>ようこそ | </p>
+                <p>어서 오세요</p>
+            </Stack>
         </div>
     )
 }

@@ -6,9 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 const pages = ['Home', 'Gallery', 'About'];
@@ -30,10 +28,10 @@ function ResponsiveAppBar() {
     }else if (page === 'Gallery'){
         setHrefPage('/#/gallery')
     }
-  },[anchorElNav]);
+  },[]);
 
   return (
-    <AppBar position="static">
+    <AppBar position="relative">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -51,7 +49,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            歡迎
+            ᐛ 
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
