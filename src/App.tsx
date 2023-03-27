@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/home';
 import About from './pages/about';
 import Gallery from './pages/gallery';
+import EastCoast from './pages/gallery/east_coast';
 import ResponsiveAppBar from './navigation/navi';
 import {containerStyle, fullPageBackgroundStyle} from './styles/styles';
 // elements from MUI
@@ -30,6 +31,7 @@ function App() {
             <Route path="/home" Component={Home} />
             <Route path="/about" Component={About} />
             <Route path="/gallery" Component={Gallery} />
+            <Route path="/gallery/east_coast" Component={EastCoast} />
           </Routes>
         </div>
       </div>
