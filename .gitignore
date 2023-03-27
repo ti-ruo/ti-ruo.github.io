@@ -1,6 +1,7 @@
 
 node_modules/.cache/gh-pages/https\!github.com\!Sakirty\!sakirty.github.io.git/
 *.json
+node_modules/*
 node_modules/.cache
 node_modules/.cache/.eslintcache
 node_modules/.cache/default-development/0.pack

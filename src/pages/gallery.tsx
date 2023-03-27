@@ -81,7 +81,7 @@ function Gallery(){
     return(
         <div>
             <h1>Gallery</h1>
-            <h3>Showing some picture I took here..</h3>
+            <h3>Showing some pictures I took here..</h3>
             <Box sx={{alignItems: 'center', display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', gap: 2 }}>
             {images.map((image) => (
                 
