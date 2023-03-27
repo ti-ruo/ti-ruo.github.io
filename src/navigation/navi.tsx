@@ -8,6 +8,7 @@ import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = ['Home', 'Gallery', 'About'];
 
@@ -61,7 +62,7 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-            
+            <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
