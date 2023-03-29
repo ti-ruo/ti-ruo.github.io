@@ -3,13 +3,34 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import fifth_ave from '../images/east_coast/fifth_ave.jpg'
+import bay_sf_overview from '../images/cali/bay_sf_overview.jpg'
+import mn_voyagers_0 from '../images/mid_west/mn_voyagers_0.jpg'
+import bryce_2 from '../images/mid_west/bryce_2.jpg'
 
 const images = [
+    {
+        url: bryce_2,
+        title: 'National Parks',
+        width: '100%',
+        href: '/#/gallery/national_parks'
+    },
     {
         url: fifth_ave,
         title: 'East Coast',
         width: '100%',
         href: '/#/gallery/east_coast'
+    },
+    {
+        url: bay_sf_overview,
+        title: 'California',
+        width: '100%',
+        href: '/#/gallery/cali'
+    },
+    {
+        url: mn_voyagers_0,
+        title: 'Mid-West',
+        width: '100%',
+        href: '/#/gallery/mid_west'
     },
 ];
 

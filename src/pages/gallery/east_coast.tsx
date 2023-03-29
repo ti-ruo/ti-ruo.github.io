@@ -26,7 +26,7 @@ function EastCoast(){
         <div>
             <Button variant="outlined" href='/#/gallery'>Back to Gallery</Button>
             <h1>US East Coast</h1>
-            <h3>Taken @US East Coast States</h3>
+            <h3>@US East Coast States</h3>
             <PhotoViewer images={images}/>
         </div>
     )

@@ -5,6 +5,10 @@ import Home from './pages/home';
 import About from './pages/about';
 import Gallery from './pages/gallery';
 import EastCoast from './pages/gallery/east_coast';
+import Cali from './pages/gallery/cali';
+import Mid_west from './pages/gallery/mid_west';
+import National_parks from './pages/gallery/national_parks';
+// other components
 import ResponsiveAppBar from './navigation/navi';
 import {containerStyle, fullPageBackgroundStyle} from './styles/styles';
 // elements from MUI
@@ -32,6 +36,9 @@ function App() {
             <Route path="/about" Component={About} />
             <Route path="/gallery" Component={Gallery} />
             <Route path="/gallery/east_coast" Component={EastCoast} />
+            <Route path="/gallery/cali" Component={Cali} />
+            <Route path="/gallery/mid_west" Component={Mid_west} />
+            <Route path="/gallery/national_parks" Component={National_parks} />
           </Routes>
         </div>
       </div>

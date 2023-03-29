@@ -30,29 +30,35 @@ function PhotoViewer(props: PhotosProps) {
     };
   
     return (
-      <div>
-        <ImageList sx={{ width: 500, height: 450 }} variant="masonry" cols={2} gap={8}>
-            {props.images.map((image, index) => (
-                <ImageListItem>
-                    <img
-                        key={index}
-                        src={image.src}
-                        alt={image.alt}
-                        className="preview-image"
-                        onClick={() => handleImageClick(image.src, image.alt)}
-                    />
-                </ImageListItem>
-                
-            ))}
-        </ImageList>
+      <div style={{ alignContent:'center' }}>
+        <div style={{ overflow: 'auto', alignContent:'center' }}>
+        <Box sx={{ width: window.innerWidth*0.6, height: window.innerHeight*0.6, overflowY: 'scroll' }}>
+            <ImageList sx={{  margin: 'auto' }} variant="masonry" cols={2} gap={8}>
+                {props.images.map((image, index) => (
+                    <ImageListItem>
+                        <img
+                            key={index}
+                            src={image.src}
+                            alt={image.alt}
+                            className="preview-image"
+                            onClick={() => handleImageClick(image.src, image.alt)}
+                            loading='lazy'
+                        />
+                    </ImageListItem>
+                    
+                ))}
+            </ImageList>
+        </Box>
+        </div>
+
         <div>
         <Modal open={modalOpen} onClose={handleCloseModal} style={{display: 'flex',alignItems:'center',justifyContent:'center'}}>
             <Box>
                 <Stack direction="column" spacing={1} alignItems={'center'}>
                     <img src={selectedImage} alt="Full size image" className="full-image" 
                     style={{ 
-                        width: '66%', height: '66%', objectFit: 'contain',
-                        maxHeight: window.innerHeight*0.6, maxWidth: window.innerWidth*0.6
+                        objectFit: 'contain',
+                        maxHeight: window.innerHeight*0.75, maxWidth: window.innerWidth*0.75
                     }}
                     />
                 </Stack>

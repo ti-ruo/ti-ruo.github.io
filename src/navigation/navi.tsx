@@ -62,7 +62,7 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-            <MenuIcon />
+              <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -83,33 +83,14 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem 
-                key={page} 
-                onClick={()=>handleCloseNavMenu(page)}
-                href={hrefPage}
+                  key={page}
                 >
-                  <Typography textAlign="center">{page}</Typography>
+                  <Button onClick={()=>handleCloseNavMenu(page)} href={hrefPage}>{page}</Button>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
