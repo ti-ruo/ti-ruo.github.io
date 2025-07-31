@@ -16,6 +16,7 @@ import {containerStyle, fullPageBackgroundStyle} from './styles/styles';
 
 // React components
 import { Route, Routes } from 'react-router-dom';
+import Thoughts from './pages/thoughts';
 // open in new tab use '_blank' in target, else use '_self'
 // use MUI library
 // https://mui.com/core
@@ -33,6 +34,7 @@ function App() {
           <Routes>
             <Route path='/' Component={Home}/>
             <Route path="/home" Component={Home} />
+            <Route path="/thoughts" Component={Thoughts} />
             <Route path="/about" Component={About} />
             <Route path="/gallery" Component={Gallery} />
             <Route path="/gallery/east_coast" Component={EastCoast} />
@@ -42,7 +44,7 @@ function App() {
           </Routes>
         </div>
       </div>
-      <footer>I have a bottom line :[</footer>
+      <footer>Sorry, nowthing down here!</footer>
     </div>
   );
 }

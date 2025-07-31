@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['Home', 'Gallery', 'About'];
+const pages = ['Home', 'Thoughts', 'Gallery', 'About'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -28,6 +28,8 @@ function ResponsiveAppBar() {
         setHrefPage('/#/about')
     }else if (page === 'Gallery'){
         setHrefPage('/#/gallery')
+    }else if (page === 'Thoughts'){
+        setHrefPage('/#/Thoughts')
     }
   },[]);
 
